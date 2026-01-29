@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-title>Dashboard</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="logout()">
+                <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Dashboard</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Secure Area</ion-card-title>
+            <ion-card-subtitle>Protected by HttpOnly Cookie</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            <h3>Server Response:</h3>
+            <p class="server-message">{{ message }}</p>
+
+            <div class="ion-margin-top">
+                <ion-note>
+                    If you see "User Content.", the JWT cookie was successfully sent and validated.
+                </ion-note>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
